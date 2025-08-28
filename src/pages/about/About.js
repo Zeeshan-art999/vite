@@ -1,28 +1,12 @@
 import React from "react";
 import ServiceCard from "../../components/cards/ServiceCard";
-import webImage from "../../assets/images/icon-dev.svg";
-import MobileImage from "../../assets/images/icon-app.svg";
-import PhotographImage from "../../assets/images/icon-photo.svg";
-import webDesignImage from "../../assets/images/icon-design.svg";
+import Logo from "../../components/logo/Logo";
+import TestimonialsCard from "../../components/cards/TestimonialsCard";
+import {services,clientlogos,testimonials} from '../../constants/about.constant';
 
 export default function About() {
-  const data = [{
-    title: "Web Development",
-    description: "High-quality development of sites at the professional level.",
-    image: webImage
-  }, {
-    title: "Mobile app",
-    description: "Professional development of applications for iOS and Android.",
-    image: MobileImage
-  }, {
-    title: "Photography",
-    description: "I make high-quality photos of any category at a professional level.",
-    image: PhotographImage
-  }, {
-    title: "Web Design",
-    description: "The most modern and high-quality design made at a professional level",
-    image: webDesignImage
-  }]
+
+ 
   return (
     <article className="about  active" data-page="about">
 
@@ -54,8 +38,8 @@ export default function About() {
         <ul className="service-list">
 
           {
-            data.map((item, index) => {
-              return <ServiceCard key={index}  image={item.image} title={item.title} description={item.description}/>
+            services.map((item, index) => {
+              return <ServiceCard key={index} image={item.image} title={item.title} description={item.description} />
             })
           }
 
@@ -78,93 +62,11 @@ export default function About() {
 
         <ul className="testimonials-list has-scrollbar">
 
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-
-              <figure className="testimonials-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-
-              <figure className="testimonials-avatar-box">
-                <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-
-              <figure className="testimonials-avatar-box">
-                <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-          </li>
-
-          <li className="testimonials-item">
-            <div className="content-card" data-testimonials-item>
-
-              <figure className="testimonials-avatar-box">
-                <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar />
-              </figure>
-
-              <h4 className="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-              <div className="testimonials-text" data-testimonials-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-          </li>
+          {
+            testimonials.map((testimonials,index)=>{
+              return<TestimonialsCard key={index} name={testimonials.name} avatar={testimonials.avatar} review={testimonials.review} />
+            })
+          }
 
         </ul>
 
@@ -221,42 +123,13 @@ export default function About() {
         <h3 className="h3 clients-title">Clients</h3>
 
         <ul className="clients-list has-scrollbar">
+          {
+            clientlogos.map((logo, index) => {
+              return <Logo key={index} Logo={logo} />
+            }
+            )
+          }
 
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-1-color.png" alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-2-color.png" alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-3-color.png" alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-4-color.png" alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-5-color.png" alt="client logo" />
-            </a>
-          </li>
-
-          <li className="clients-item">
-            <a href="#">
-              <img src="./assets/images/logo-6-color.png" alt="client logo" />
-            </a>
-          </li>
 
         </ul>
 

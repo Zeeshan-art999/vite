@@ -1,36 +1,34 @@
 import React from "react";
+import { Link } from "react-router";
 
-export default function Navbar(){
-    return(
-        
-      <nav class="navbar">
+export default function Navbar() {
+  return (
+    <nav className="navbar">
 
-        <ul class="navbar-list">
+      <ul className="navbar-list">
 
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
+        <li className="navbar-item">
+          <Link to="/" className="navbar-link">Home</Link>
+        </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
+        <li className="navbar-item">
+          <Link to="/blogs" className="navbar-link">Blog</Link>
+        </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
+        <li className="navbar-item">
+          <Link to="/resume" className="navbar-link">Resume</Link>
+        </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
+        <li className="navbar-item">
+          <Link to="/contact" className="navbar-link">Contact</Link>
+        </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
+        <li className="navbar-item">
+          <Link to="/portfolio" className="navbar-link">Portfolio</Link>
+        </li>
 
-        </ul>
+      </ul>
 
-      </nav>
-
-
-    )
+    </nav>
+  )
 }
