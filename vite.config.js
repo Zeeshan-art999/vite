@@ -1,5 +1,6 @@
 import { defineConfig, transformWithEsbuild } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import commomjs from 'vite-plugin-commonjs';
 
 export default defineConfig({
   plugins: [
@@ -17,6 +18,7 @@ export default defineConfig({
       },
     },
     react(),
+    commomjs()
   ],
 
   optimizeDeps: {

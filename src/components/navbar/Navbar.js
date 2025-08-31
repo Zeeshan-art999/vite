@@ -12,7 +12,7 @@ export default function Navbar() {
         </li>
 
         <li className="navbar-item">
-          <Link to="/blogs" className="navbar-link">Blog</Link>
+          <Link to="/blog" className="navbar-link">Blog</Link>
         </li>
 
         <li className="navbar-item">

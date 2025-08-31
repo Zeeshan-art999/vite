@@ -1,14 +1,23 @@
 import React from "react";
+import Logo from '../logo/Logo';
+import MyAvatar from '../../assets/images/my-avatar.png'
+
+import InfoTile from "../info-tile/InfoTile";
 
 export default function sidebar(){
+
+ const contactlists = [ 
+  {icon :'mail-outline',title:'Email',value:'mailto:richard@example.com' ,link:''},
+  {icon :'phone-potrait-outline',title:'Phone',value:'+1 (213) 352-2795',tel:'+12133522795'},
+  {icon :'calender-outline',title:'Birthday',value:'June 23, 1982' ,link:''},
+  {icon :'location-outline',title:'Location',value:'Sacramento, California,USA' ,link:''}
+ ] 
     return(
          <aside className="sidebar" data-sidebar>
 
       <div className="sidebar-info">
 
-        <figure className="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80"/>
-        </figure>
+        <Logo logo={MyAvatar}/>
 
         <div className="info-content">
           <h1 className="name" title="Richard hanrick">Richard hanrick</h1>
@@ -30,61 +39,10 @@ export default function sidebar(){
 
         <ul className="contacts-list">
 
-          <li className="contact-item">
-
-            <div className="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" className="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li className="contact-item">
-
-            <div className="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" className="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li className="contact-item">
-
-            <div className="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li className="contact-item">
-
-            <div className="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div className="contact-info">
-              <p className="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
+          {contactlists?.map((contact,index)=>{
+            return<InfoTile key={index} contact={contact}/>
+          }
+        )}
 
         </ul>
 
