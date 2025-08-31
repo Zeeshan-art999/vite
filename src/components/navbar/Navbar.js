@@ -12,19 +12,19 @@ export default function Navbar() {
         </li>
 
         <li className="navbar-item">
-          <Link to="/blog" className="navbar-link">Blog</Link>
-        </li>
-
-        <li className="navbar-item">
           <Link to="/resume" className="navbar-link">Resume</Link>
         </li>
 
         <li className="navbar-item">
-          <Link to="/contact" className="navbar-link">Contact</Link>
+          <Link to="/blog" className="navbar-link">Blog</Link>
         </li>
 
         <li className="navbar-item">
           <Link to="/portfolio" className="navbar-link">Portfolio</Link>
+        </li>
+
+        <li className="navbar-item">
+          <Link to="/Contact" className="navbar-link">Contact</Link>
         </li>
 
       </ul>
