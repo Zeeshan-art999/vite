@@ -35,21 +35,21 @@ const clientlogos = [
 ]
 
 const testimonials = [{
-    name: "Daniel lewis",
+    name: "Usman",
     avatar: Avator1,
-    review: "Richard was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    review: "Usman was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
 }, {
-    name: "Jessica miller",
+    name: "Mahi",
     avatar: Avator2,
-    review: "Richard was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    review: "Mahi was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
 }, {
-    name: "Michael davis",
+    name: "Aqsa",
     avatar: Avator3,
-    review: "Richard was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    review: "Aqsa was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
 }, {
-    name: "Stevan smith",
+    name: "Hamza",
     avatar: Avator4,
-    review: "Richard was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
+    review: "Hamza was hired to create a corporate identity. We were very pleased with the work done. She ha lot of experienceand is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididtconsectetur adipisc elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia."
 }
 ]
 
