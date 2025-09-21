@@ -9,6 +9,7 @@ import Navbar from "../components/navbar/Navbar";
 import Products from "../pages/products/Products";
 import Github from "../pages/github/Github";
 import Counter from "../pages/counter/Counter";
+import Post from "../pages/posts/Post";
 
 function Routing() {
 
@@ -29,6 +30,7 @@ function Routing() {
               <Route path="/resume" element={<Resume />} />
               <Route path="/products" element={<Products />} />
               <Route path="/counter" element={<Counter />} />
+              <Route path="/posts" element={<Post/>}/>
               <Route path="*" element={<h1> File can't found </h1>} />
             </Routes>
           </div>
