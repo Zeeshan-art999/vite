@@ -111,10 +111,9 @@ export const postSlice = createSlice({
             })
             .addCase(updatePost.fulfilled, (state, action) => {
                 state.loading = false;
-                state.posts = state.posts.findIndex(post => post.id === action.payload.id)
-                if (state.posts !== -1) {
-                    state.posts[index] = action.payload;
-                }
+                console.log("action.payload", action);
+                state.posts = state.posts.map(post =>
+                    post.id === action.payload.id ? action.payload : post);
                 state.error = null;
             })
             .addCase(updatePost.rejected, (state, action) => {
