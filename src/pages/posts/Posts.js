@@ -84,8 +84,13 @@ export default function Post() {
               gap: "20px",
             }}>
               <h3>{post.title}</h3>
-              <p>{post.content}</p>
+              <p>{post.content}</p> 
               <p>{post.createAt}</p>
+              <img src={post.imageUrl} alt="post" style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "5px",
+              }} />
 
               <button onClick={() => onClickDeleteHandler(post.id)} style={{
                 height: "50px",

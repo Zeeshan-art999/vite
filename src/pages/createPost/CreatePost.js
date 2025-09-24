@@ -14,7 +14,7 @@ export default function Post() {
   const goBack = () => {
     navigation("/posts");
   }
-  const onClickHandler = async() => {
+  const onClickHandler = async () => {
     if (title === "" || content === "") {
       alert("Please fill all the fields");
       return;
@@ -25,10 +25,34 @@ export default function Post() {
     let newPost = {
       title: title,
       content: content,
+      imageUrl: image,
       createAt: new Date().toISOString(),
     }
-     await dispatch(createPost(newPost));
+    await dispatch(createPost(newPost));
     goBack();
+  }
+
+  const onChangeImageHandler = async (e) => {
+    console.log("Image:", e.target.files[0]);
+    //Upload image to cloudinary
+
+    try {
+      const file = e.target.files[0];
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset","todo-app");
+      const response = await fetch("https://api.cloudinary.com/v1_1/dw8pfjnjp/image/upload", {
+        method: "POST",
+        body: formData
+      })
+      const data = await response.json();
+     console.log("Image URL:", data.secure_url);
+      setImage(data.secure_url);
+      console.log("Image uploaded successfully");
+
+    } catch (error) {
+      console.log("Error uploading image:", error);
+    }
   }
 
   return (
@@ -83,9 +107,7 @@ export default function Post() {
         border: "1px solid #ccc",
         fontSize: "1rem",
       }}
-        onChange={(e) => setImage(e.target.files[0])} value={image}
-
-      />
+        onChange={(e) => onChangeImageHandler(e)} />
       <button style={{
         width: "80%",
         height: "50px",
